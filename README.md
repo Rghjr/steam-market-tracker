@@ -54,7 +54,7 @@ Example Excel table:
 - Sleep time between requests (`sleep_seconds` in `config.json`) should be long enough, otherwise Steam may block requests and you'll get **no price info**.
 - Script works **only if the Steam Market is online**.
 - Collects data for the **lowest price item currently available** (unless a URL is specified, then it fetches that exact listing).
-- Path to the Excel file must include the file name itself and use / or \\ Windows. For example: C:\\Users\\Rghjr\\Desktop\\steam_data.xlsx or C:/Users/Rghjr/Desktop/steam_data.xlsx
+- Path to the Excel file must include the file name itself and use / or \\\ Windows. For example: C:\\Users\\Rghjr\\Desktop\\steam_data.xlsx or C:/Users/Rghjr/Desktop/steam_data.xlsx
 
 ---
 
