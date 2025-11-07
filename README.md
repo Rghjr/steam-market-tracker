@@ -64,7 +64,7 @@ Example:
                                   // You can also provide full Steam Market URL instead of name
   }
 }
-
+```
 
 ---
 
