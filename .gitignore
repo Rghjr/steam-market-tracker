@@ -1,4 +1,33 @@
-*.xlsx
-venv/
+# --- Python ---
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+*.log
+
+# --- Virtual environments ---
+venv/
+env/
+.venv/
+.env/
+
+# --- Configuration / secrets ---
+config.json
+*.env
+*.ini
+*.cfg
+
+# --- IDE / Editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS generated files ---
+.DS_Store
+Thumbs.db
+
+# --- Project-specific ---
+screenshots/
