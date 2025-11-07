@@ -55,9 +55,9 @@ Example Excel table:
 - Script works **only if the Steam Market is online**.
 - Collects data for the **lowest price item currently available** (unless a URL is specified, then it fetches that exact listing).
 - Path to the Excel file must include the file name itself and use / or \\\ Windows.
-  For example:
-  C:\\Users\\Rghjr\\Desktop\\steam_data.xlsx
-  C:/Users/Rghjr/Desktop/steam_data.xlsx
+  - For example:
+    C:\\Users\\Rghjr\\Desktop\\steam_data.xlsx
+    C:/Users/Rghjr/Desktop/steam_data.xlsx
 
 ---
 
