@@ -49,6 +49,7 @@ This Python script tracks the Steam Market prices of specific items (currently C
 
 Example:
 
+```json
 {
   "appid": 730,                  // Steam app ID: 730 = CS:GO, 570 = Dota 2, 440 = TF2
   "currency": 6,                 // Steam currency ID (6 = PLN)
