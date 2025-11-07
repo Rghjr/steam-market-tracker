@@ -49,7 +49,6 @@ This Python script tracks the Steam Market prices of specific items (currently C
 
 Example:
 
-```json
 {
   "appid": 730,                  // Steam app ID: 730 = CS:GO, 570 = Dota 2, 440 = TF2
   "currency": 6,                 // Steam currency ID (6 = PLN)
@@ -64,3 +63,80 @@ Example:
                                   // You can also provide full Steam Market URL instead of name
   }
 }
+
+
+---
+
+## 💡 Parameter Explanation
+
+| Key           | Description |
+|---------------|-------------|
+| appid         | Steam app ID (730 = CS:GO, 570 = Dota 2, 440 = TF2) |
+| currency      | Steam currency ID (6 = PLN, see full list in Steam API docs) |
+| output_file   | Path to Excel file (must be inside an existing folder) |
+| sleep_seconds | Delay between requests (to avoid blocking) |
+| items         | Dictionary of items: "Item Name or URL": Buy Price |
+
+---
+
+## 🧩 Installation & Setup
+
+### 🐧 Linux (Python 3.13)
+
+Install Python 3.13:
+```bash
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.13 python3.13-venv python3.13-dev
+```
+
+Create a virtual environment:
+```bash
+python3.13 -m venv venv
+source venv/bin/activate
+```
+
+Install dependencies:
+```bash
+pip install --upgrade pip
+pip install requests pandas openpyxl
+```
+
+Run the script:
+```bash
+python main.py
+```
+
+> ⚠️ Make sure the folder for the Excel file (e.g., data/) exists before running the script.
+
+### 🪟 Windows (Python 3.13)
+
+Install Python 3.13:
+Download from: https://www.python.org/downloads/release/python-3130/
+
+Create a virtual environment (optional):
+```powershell
+python -m venv venv
+.
+env\Scripts\Activate.ps1
+```
+
+Install dependencies:
+```powershell
+pip install --upgrade pip
+pip install requests pandas openpyxl
+```
+
+Run the script:
+```powershell
+python main.py
+```
+
+> ⚠️ Ensure that the output directory for the Excel file already exists.
+
+---
+
+## 📘 License
+
+This project is released under the MIT License.
+Feel free to fork, modify, and improve it!
