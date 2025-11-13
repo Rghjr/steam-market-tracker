@@ -236,12 +236,12 @@ def generate_charts(wb: openpyxl.Workbook, file_path: str):
 
 
 def fix_windows_path(path_str: str) -> str:
-    """Return a valid Windows path with backslashes."""
+    """
+    Return a clean absolute path using forward slashes.
+    """
     normalized = os.path.abspath(os.path.expanduser(path_str))
-    fixed = normalized.replace('/', '\\')
+    fixed = normalized.replace('\\', '/')
     return fixed
-
-
 
 
 def load_config(config_path: str) -> dict:
