@@ -235,15 +235,6 @@ def generate_charts(wb: openpyxl.Workbook, file_path: str):
     wb.save(file_path)
 
 
-def fix_windows_path(path_str: str) -> str:
-    """
-    Return a clean absolute path using forward slashes.
-    """
-    normalized = os.path.abspath(os.path.expanduser(path_str))
-    fixed = normalized.replace('\\', '/')
-    return fixed
-
-
 def load_config(config_path: str) -> dict:
     """
     Load configuration (items, currency, and output path) from JSON file.
@@ -258,10 +249,8 @@ if __name__ == "__main__":
     currency = config["currency"]
     file_out = config["output_file"]
     my_items = config["items"]
-    
-    save_path = fix_windows_path(file_out)
 
-    create_excel_file_if_missing(save_path)
+    create_excel_file_if_missing(file_out)
 
     rows = []
     for item, buy_price in my_items.items():
@@ -286,7 +275,7 @@ if __name__ == "__main__":
 
         time.sleep(3)
 
-    wb = write_to_excel(save_path, rows)
-    generate_charts(wb, save_path)
+    wb = write_to_excel(file_out, rows)
+    generate_charts(wb, file_out)
 
-    print(f"✅ Data saved and charts updated: {save_path}")
+    print(f"✅ Data saved and charts updated: {file_out}")
